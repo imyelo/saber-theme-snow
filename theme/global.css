@@ -1,0 +1,50 @@
+::selection {
+  background: hsl(170,100%,70%);
+  color: #fff;
+}
+html, body {
+  font: 200 12px/1.62 "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "Xin Gothic", "Georgia", sans-serif;
+  color: #333;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 8rem 0 2rem;
+}
+h3 {
+  margin: 4rem 0 2rem;
+}
+blockquote {
+  margin: 0;
+  padding: 4px 4px 4px 16px;
+  color: hsl(0,0%,40%);
+  background-color: hsl(0,0%,98%);
+  border-left: 8px solid hsl(0,0%,87%);
+}
+code {
+  padding: 0 0.5em;
+  color: hsl(0,0%,40%);
+  background-color: hsl(0,0%,98%);
+}
+.saber-highlight {
+  font-size: 11px;
+  width: 720px;
+  left: calc((560px - 720px - 2rem) / 2);
+}
+@media (max-width: calc(720px)) {
+  .saber-highlight {
+    width: 100%;
+    left: 0;
+  }
+}
+img {
+  max-width: 100%;
+}
