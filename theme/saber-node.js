@@ -1,5 +1,8 @@
-// saber-node.js
 exports.onCreatePages = function() {
+  /**
+   * fork siblings navigating from:
+   * - https://saber.land/tutorial/tutorial.html#showing-previous-and-next-post
+   */
   // Pages are read into the `this.pages` Map
   // Sort posts by createdAt (date) from new to old
   const posts = [...this.pages.values()]
