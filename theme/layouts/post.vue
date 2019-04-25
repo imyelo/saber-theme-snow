@@ -4,8 +4,11 @@
     <div class="page">
       <h1>{{ page.attributes.title }}</h1>
       <div class="author">
-        <div class="avatar"><img src="/avatar.jpg" /></div>
-        <div class="name">{{ $siteConfig.title }}</div>
+        <div class="avatar">
+          <img v-if="page.attributes.avatar" :src="page.attributes.avatar" />
+          <img v-else src="/avatar.jpg" />
+        </div>
+        <div class="name">{{ page.attributes.author || $siteConfig.author }}</div>
       </div>
       <div class="post">
         <slot name="default" />
@@ -56,7 +59,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-
 .home {
   padding: 1rem;
   line-height: 1em;

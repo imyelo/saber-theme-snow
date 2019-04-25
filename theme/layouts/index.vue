@@ -28,12 +28,10 @@
     <section class="catch-me">
       <h2>Catch me</h2>
       <ul>
-        <li><a href="https://github.com/imyelo" target="_blank">GitHub</a></li>
-        <li v-show="false"><a href="https://acg.mn/@yelo" target="_blank">Mastodon</a></li>
-        <li v-show="false"><a href="https://okjk.co/OwWXD" target="_blank">Jike</a></li>
-        <li><a href="https://weibo.com/iimyelo" target="_blank">Weibo</a></li>
-        <li><a href="https://steamcommunity.com/profiles/76561198086707846/" target="_blank">Steam</a></li>
-        <li><a @click="mail('emhpaHV6ZXllQGdtYWlsLmNvbQ==')">Email</a></li>
+        <li v-for="(me, index) in page.attributes.catchMe" v-show="!me.hide" :key="index">
+          <a v-if="me.email" @click="mail(me.url)">{{ me.name }}</a>
+          <a v-else :href="me.url" target="_blank">{{ me.name }}</a>
+        </li>
       </ul>
     </section>
   </div>
