@@ -39,6 +39,14 @@ import scrollDoc from 'scroll-doc'
 
 export default {
   props: ['page'],
+  head () {
+    const pageTitle = this.page.attributes.title
+    return {
+      title: pageTitle ?
+        `${pageTitle} - ${this.$siteConfig.title}` :
+        this.$siteConfig.title
+    }
+  },
   methods: {
     toTop () {
       scroll.top(scrollDoc(), 0)

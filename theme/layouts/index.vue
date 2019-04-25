@@ -45,6 +45,11 @@ import '../global.css'
 
 export default {
   props: ['page'],
+  head () {
+    return {
+      title: this.$siteConfig.title
+    }
+  },
   methods: {
     mail (url) {
       window.open(`mailto:${Buffer.from(url, 'base64').toString()}`)

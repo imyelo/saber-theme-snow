@@ -11,6 +11,11 @@ import fecha from 'fecha'
 import '../global.css'
 
 export default {
+  head () {
+    return {
+      title: `404 Not Found - ${this.$siteConfig.title}`
+    }
+  },
 }
 </script>
 
