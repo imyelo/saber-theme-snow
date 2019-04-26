@@ -64,6 +64,15 @@ blockquote {
   color: hsl(60,1%,40%);
   border-left: 0.5em solid hsl(60,1%,90%);
 }
+pre {
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre code {
+  width: 100%;
+  white-space: pre;
+}
 code {
   display: inline-block;
   padding: 0 0.5em;
@@ -71,7 +80,7 @@ code {
   background-color: hsla(60,1%,0%,0.02);
 }
 .saber-highlight {
-  font-size: 1em;
+  font-size: 0.85em;
   width: 60rem;
   left: calc((48rem - 60rem - 2rem) / 2);
 }
