@@ -127,9 +127,6 @@ export default {
     a {
       text-decoration: none;
       transition: 200ms all ease;
-      &:hover {
-        color: hsl(60,1%,30%);
-      }
     }
   }
 }

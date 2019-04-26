@@ -19,6 +19,7 @@ a {
   cursor: pointer;
 }
 a:hover {
+  color: #fff;
   text-decoration: underline;
   background-color: hsla(200,90%,70%,0.5);
 }
