@@ -15,23 +15,47 @@ body {
 a {
   color: inherit;
   text-decoration: underline;
+  transition: all 200ms ease;
   cursor: pointer;
 }
 a:hover {
   text-decoration: underline;
+  background-color: hsla(200,90%,70%,0.5);
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: hsl(60,1%,30%);
 }
 h1 {
+  margin: 8rem 0 2rem;
+  font-size: 2em;
   color: hsl(60,1%,25%);
 }
 h2 {
   margin: 8rem 0 2rem;
+  font-size: 1.5em;
 }
 h3 {
   margin: 4rem 0 2rem;
+  font-size: 1.25em;
+}
+h4 {
+  margin: 2rem 0 1rem;
+  font-size: 1.125em;
+}
+h5 {
+  margin: 2rem 0 1rem;
+  font-size: 1.0625em;
+}
+h6 {
+  margin: 2rem 0 1rem;
+  font-size: 1em;
+}
+hr {
+  margin: 8em 0;
+  border: none;
+  height: 1px;
+  background-color: hsla(60,1%,0%,0.04);
 }
 blockquote {
   margin: 0;
@@ -40,6 +64,7 @@ blockquote {
   border-left: 0.5em solid hsl(60,1%,90%);
 }
 code {
+  display: inline-block;
   padding: 0 0.5em;
   color: hsl(60,1%,40%);
   background-color: hsla(60,1%,0%,0.02);

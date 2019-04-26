@@ -94,7 +94,7 @@ export default {
       }
     }
     .name {
-      font-size: 1rem;
+      font-size: 1em;
       padding-left: 0.5em;
     }
   }
@@ -119,7 +119,7 @@ export default {
     align-items: center;
   }
   li {
-    color: hsl(60,1%,80%);
+    color: hsl(60,1%,60%);
     line-height: 2em;
     &.next {
       margin-left: auto;
