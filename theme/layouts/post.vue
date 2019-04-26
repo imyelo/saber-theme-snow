@@ -1,6 +1,8 @@
 <template>
   <div>
-    <nav class="home"><saber-link to="/">&lt; Back to Home</saber-link></nav>
+    <nav class="top">
+      <saber-link class="to-home" to="/">&lt; Back to Home</saber-link>
+    </nav>
     <div class="page">
       <h1>{{ page.attributes.title }}</h1>
       <div class="author">
@@ -59,16 +61,18 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.home {
+.top {
   padding: 1rem;
   line-height: 1em;
+  display: flex;
+  justify-content: space-between;
   a {
     text-decoration: none;
   }
 }
 
 .page {
-  width: 560px;
+  width: 48rem;
   max-width: 100%;
   margin: calc(8rem - 3rem) auto;
   padding: 0 1rem;
@@ -98,7 +102,7 @@ export default {
 
 .siblings {
   margin: 8rem auto;
-  padding: 2rem 1rem 0;
+  padding: 2rem 0 0;
   width: 100%;
   max-width: 640px;
   box-sizing: border-box;

@@ -61,7 +61,7 @@ export default {
 
 <style lang="postcss" scoped>
 .page {
-  width: 560px;
+  width: 48rem;
   max-width: 100%;
   margin: 8rem auto 16rem;
   padding: 0 1rem;
