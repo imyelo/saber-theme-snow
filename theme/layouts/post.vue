@@ -146,7 +146,7 @@ export default {
       display: inline-block;
       width: 0;
       height: 0;
-      font-size: 4px;
+      transform: scale(0.5);
       border-style: solid;
       border-width: 0 1em 1.5em 1em;
       border-color: transparent;
