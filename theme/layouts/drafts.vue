@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <h1>Drafts</h1>
-    <ul v-if="page.drafts.length > 0">
+    <ul v-if="page.drafts && page.drafts.length > 0">
       <li v-for="draft in page.drafts" :key="draft.permalink">
         <saber-link class="title" :to="draft.attributes.permalink">
           {{ draft.attributes.title }}
