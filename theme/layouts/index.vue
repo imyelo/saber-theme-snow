@@ -88,7 +88,7 @@ export default {
       font-size: 1rem;
       font-weight: bold;
       color: #fff;
-      background-color: #111;
+      background-color: hsl(60,1%,10%);
     }
   }
   section {
@@ -96,8 +96,8 @@ export default {
       margin: 8rem 0 2rem;
       font-size: 1rem;
       font-weight: bold;
-      color: #111;
-      border-left: 2px solid #111;
+      color: hsl(60,1%,10%);
+      border-left: 2px solid hsl(60,1%,10%);
       padding-left: 1em;
     }
   }
@@ -114,22 +114,19 @@ export default {
       margin: 1rem 0;
       font-size: 1rem;
       font-weight: normal;
-      color: #333;
+      color: hsl(60,1%,35%);
       display: flex;
       .left {
-        .date {
-          color: #666;
-        }
+        color: hsl(60,1%,40%);
         .divider {
           padding: 0 2em;
-          color: #666;
         }
       }
       .right {
         flex: 1;
         .category {
           padding-left: 0.5em;
-          color: #ccc;
+          color: hsl(60,1%,80%);
           font-style: italic;
         }
       }
@@ -144,9 +141,10 @@ export default {
     }
     li {
       display: inline-block;
-      border-right: 1px solid #ccc;
+      border-right: 1px solid hsl(60,1%,90%);
       padding-right: 1em;
       margin-right: 1em;
+      line-height: 1em;
       &:last-child {
         border-right: none;
       }

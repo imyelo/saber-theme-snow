@@ -28,7 +28,7 @@ export default {
   .to-home {
     margin: 8rem 0;
     padding: 2rem 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid hsla(60,1%,0%,0.04);
     a {
       text-decoration: none;
     }

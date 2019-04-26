@@ -74,7 +74,7 @@ export default {
   padding: 0 1rem;
   box-sizing: border-box;
   .author {
-    margin: 1rem 0 4rem;
+    margin: 1rem 0 8rem;
     line-height: 2em;
     display: flex;
     justify-content: left;
@@ -102,7 +102,7 @@ export default {
   width: 100%;
   max-width: 640px;
   box-sizing: border-box;
-  border-top: 1px solid #eee;
+  border-top: 1px solid hsl(60,1%,0%,0.04);
   ul, li {
     list-style: none;
     margin: 0;
@@ -115,7 +115,7 @@ export default {
     align-items: center;
   }
   li {
-    color: #ccc;
+    color: hsl(60,1%,80%);
     line-height: 2em;
     &.next {
       margin-left: auto;
@@ -124,7 +124,7 @@ export default {
       text-decoration: none;
       transition: 200ms all ease;
       &:hover {
-        color: #333;
+        color: hsl(60,1%,30%);
       }
     }
   }
@@ -136,8 +136,9 @@ export default {
   .to-top {
     display: inline-block;
     padding: 1em;
+    cursor: pointer;
     &:hover .symbol {
-      border-bottom-color: hsl(0,0%,0%);
+      border-bottom-color: hsl(60,1%,0%);
     }
     .symbol {
       display: inline-block;
@@ -147,7 +148,7 @@ export default {
       border-style: solid;
       border-width: 0 1em 1.5em 1em;
       border-color: transparent;
-      border-bottom-color: hsl(0,0%,40%);
+      border-bottom-color: hsl(60,1%,30%);
       transition: 200ms all ease;
     }
   }

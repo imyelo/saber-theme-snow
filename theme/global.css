@@ -3,8 +3,8 @@
   color: #fff;
 }
 html, body {
-  font: 200 12px/1.62 "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "Xin Gothic", "Georgia", sans-serif;
-  color: #333;
+  font: 200 12px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  color: hsl(60,1%,35%);
 }
 
 a {
@@ -16,6 +16,12 @@ a:hover {
   text-decoration: underline;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: hsl(60,1%,30%);
+}
+h1 {
+  color: hsl(60,1%,25%);
+}
 h2 {
   margin: 8rem 0 2rem;
 }
@@ -24,15 +30,14 @@ h3 {
 }
 blockquote {
   margin: 0;
-  padding: 4px 4px 4px 16px;
-  color: hsl(0,0%,40%);
-  background-color: hsl(0,0%,98%);
-  border-left: 8px solid hsl(0,0%,87%);
+  padding: 0 0 0 1em;
+  color: hsl(60,1%,40%);
+  border-left: 0.5em solid hsl(60,1%,90%);
 }
 code {
   padding: 0 0.5em;
-  color: hsl(0,0%,40%);
-  background-color: hsl(0,0%,98%);
+  color: hsl(60,1%,40%);
+  background-color: hsla(60,1%,0%,0.02);
 }
 .saber-highlight {
   font-size: 11px;
@@ -47,6 +52,38 @@ code {
 }
 img {
   max-width: 100%;
+}
+table {
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 2.5em;
+}
+thead {
+  text-align: center;
+}
+tbody {
+  text-align: left;
+}
+th, td {
+  padding: 0.5em 1em;
+  color: hsl(60,1%,30%);
+  border: 1px solid hsl(60,1%,90%);
+}
+td {
+  vertical-align: top;
+}
+tr:nth-child(even) {
+  background-color: hsla(60,1%,0%,0.02);
+}
+table pre {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 .page-enter-active, .page-leave-active {
