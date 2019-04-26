@@ -1,7 +1,8 @@
 <template>
   <div>
     <nav class="top">
-      <saber-link class="to-home" to="/">&lt; Back to Home</saber-link>
+      <saber-link v-if="page.attributes.draft" class="to-home" to="/drafts">&lt; Back to Drafts-List</saber-link>
+      <saber-link v-else class="to-home" to="/">&lt; Back to Home</saber-link>
     </nav>
     <div class="page">
       <h1>{{ page.attributes.title }}</h1>
