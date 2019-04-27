@@ -16,6 +16,7 @@
       <div class="post">
         <slot name="default" />
       </div>
+      <div class="copyright" v-if="page.copyright" v-html="page.copyright"></div>
     </div>
     <nav class="siblings">
       <ul>
@@ -99,13 +100,30 @@ export default {
       padding-left: 0.5em;
     }
   }
+  .copyright {
+    margin: 8rem auto 0;
+    padding-left: 1em;
+    border-left: 4px solid hsl(60,1%,20%);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 48rem;
+    color: hsl(60,1%,40%);
+    .strong {
+      font-weight: bold;
+    }
+    a {
+      padding: 0 0.5rem;
+      text-decoration: none;
+    }
+  }
 }
+
 
 .siblings {
   margin: 8rem auto;
   padding: 2rem 0 0;
   width: 100%;
-  max-width: 640px;
+  max-width: 48rem;
   box-sizing: border-box;
   border-top: 1px solid hsl(60,1%,0%,0.04);
   ul, li {
