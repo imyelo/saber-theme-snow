@@ -45,7 +45,7 @@ export default {
   props: ['page'],
   head () {
     return {
-      title: this.$siteConfig.title
+      title: this.$siteConfig.title,
     }
   },
   methods: {

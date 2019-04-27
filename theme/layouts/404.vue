@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import fecha from 'fecha'
 import '../global.css'
 
 export default {
