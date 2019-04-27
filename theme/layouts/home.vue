@@ -19,7 +19,11 @@
               <saber-link class="title" :to="post.attributes.permalink">
                 {{ post.attributes.title }}
               </saber-link>
-              <span class="category" v-if="post.attributes.category">#{{ post.attributes.category }}</span>
+              <template v-if="post.attributes.categories">
+                <span class="category" v-for="(category, index) in post.attributes.categories" :key="index">
+                  #{{ category }}
+                </span>
+              </template>
             </div>
           </h3>
         </li>
