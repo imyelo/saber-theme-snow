@@ -1,5 +1,5 @@
 <template>
-  <PostsPage title="Drafts" :posts="page.drafts" />
+  <PostsPage :title="`~${page.category}`" :posts="page.posts" />
 </template>
 
 <script>

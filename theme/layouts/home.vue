@@ -20,9 +20,9 @@
                 {{ post.attributes.title }}
               </saber-link>
               <template v-if="post.attributes.categories">
-                <span class="category" v-for="(category, index) in post.attributes.categories" :key="index">
-                  #{{ category }}
-                </span>
+                <saber-link class="category" v-for="(cat, index) in post.attributes.categories" :key="index" :to="`categories/${cat}`">
+                  ~{{ cat }}
+                </saber-link>
               </template>
             </div>
           </h3>
@@ -129,9 +129,14 @@ export default {
       .right {
         flex: 1;
         .category {
-          padding-left: 0.5em;
+          margin-left: 1em;
           color: hsl(60,1%,80%);
           font-style: italic;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+            background-color: transparent;
+          }
         }
       }
     }
