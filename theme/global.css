@@ -76,6 +76,9 @@ pre code {
 code {
   display: inline-block;
   padding: 0 0.5em;
+  box-sizing: border-box;
+  word-break: break-all;
+  word-wrap: break-word;
   color: hsl(60,1%,40%);
   background-color: hsla(60,1%,0%,0.02);
 }
