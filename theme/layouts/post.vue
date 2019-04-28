@@ -108,10 +108,7 @@ export default {
     width: 100%;
     max-width: 48rem;
     color: hsl(60,1%,40%);
-    .strong {
-      font-weight: bold;
-    }
-    a {
+    & >>> a {
       padding: 0 0.5rem;
       text-decoration: none;
     }
