@@ -11,12 +11,17 @@
           <img v-if="page.attributes.avatar" :src="page.attributes.avatar" />
           <img v-else src="/avatar.jpg" />
         </div>
-        <div class="name">{{ page.attributes.author || $siteConfig.author }}</div>
+        <span class="name">{{ page.attributes.author || $siteConfig.author }}</span>
+        <span class="divider">-</span>
+        <span class="date">{{ page.attributes.date | date }}</span>
       </div>
       <div class="post">
         <slot name="default" />
       </div>
-      <div class="copyright" v-if="page.copyright" v-html="page.copyright"></div>
+      <div class="updated" v-if="page.attributes.updated">
+        - Last updated on {{ page.attributes.updated | date }}
+      </div>
+      <div class="copyright" v-if="page.copyright" v-html="page.copyright" />
     </div>
     <nav class="siblings">
       <ul>
@@ -41,6 +46,7 @@
 <script>
 import '../global.css'
 import 'prismjs/themes/prism.css'
+import fecha from 'fecha'
 import scroll from 'scroll'
 import scrollDoc from 'scroll-doc'
 
@@ -58,6 +64,9 @@ export default {
     toTop () {
       scroll.top(scrollDoc(), 0)
     },
+  },
+  filters: {
+    date: (v) => fecha.format(new Date(v), 'YYYY/MM/DD'),
   },
 }
 </script>
@@ -97,8 +106,24 @@ export default {
     }
     .name {
       font-size: 1em;
-      padding-left: 0.5em;
+      padding: 0 1em;
     }
+    .divider, .date {
+      color: hsl(60,1%,60%);
+    }
+    .date {
+      padding: 0 1em;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+  }
+  .updated {
+    margin: 8rem auto 0;
+    padding: 0 0.5em;
+    letter-spacing: 1px;
+    text-align: right;
+    font-style: italic;
+    color: hsl(60,1%,60%);
   }
   .copyright {
     margin: 8rem auto 0;
@@ -109,7 +134,7 @@ export default {
     max-width: 48rem;
     color: hsl(60,1%,40%);
     & >>> a {
-      padding: 0 0.5rem;
+      padding: 0 0.5em;
       text-decoration: none;
     }
   }
