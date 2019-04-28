@@ -18,10 +18,10 @@
       <div class="post">
         <slot name="default" />
       </div>
+      <div class="copyright" v-if="page.copyright" v-html="page.copyright" />
       <div class="updated" v-if="page.attributes.updated">
         - Last updated on {{ page.attributes.updated | date }}
       </div>
-      <div class="copyright" v-if="page.copyright" v-html="page.copyright" />
     </div>
     <nav class="siblings">
       <ul>
@@ -117,14 +117,6 @@ export default {
       letter-spacing: 1px;
     }
   }
-  .updated {
-    margin: 8rem auto 0;
-    padding: 0 0.5em;
-    letter-spacing: 1px;
-    text-align: right;
-    font-style: italic;
-    color: hsl(60,1%,60%);
-  }
   .copyright {
     margin: 8rem auto 0;
     padding-left: 1em;
@@ -137,6 +129,14 @@ export default {
       padding: 0 0.5em;
       text-decoration: none;
     }
+  }
+  .updated {
+    margin: 8rem auto 0;
+    padding: 0 0.5em;
+    letter-spacing: 1px;
+    text-align: right;
+    font-style: italic;
+    color: hsl(60,1%,60%);
   }
 }
 
