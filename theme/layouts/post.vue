@@ -37,6 +37,12 @@
         </li>
       </ul>
     </nav>
+    <div class="comments">
+      <a v-if="!isDisqusShow" class="switch" @click="loadDisqus">
+        [ See comments / Leave a message ]
+      </a>
+      <div id="disqus_thread"></div>
+    </div>
     <div class="bottom">
       <span class="to-top" @click="toTop"><span class="symbol"></span></span>
     </div>
@@ -45,12 +51,19 @@
 
 <script>
 import 'prismjs/themes/prism.css'
+import 'disqusjs/dist/disqusjs.css'
 import fecha from 'fecha'
 import scroll from 'scroll'
 import scrollDoc from 'scroll-doc'
+import DisqusJS from 'disqusjs'
 
 export default {
   props: ['page'],
+  data () {
+    return {
+      isDisqusShow: false,
+    }
+  },
   head () {
     const pageTitle = this.page.attributes.title
     return {
@@ -77,6 +90,16 @@ export default {
       if (element) {
         win.scrollTo(0, element.offsetTop)
       }
+    },
+    loadDisqus () {
+      this.isDisqusShow = true
+      window.DISQUS = null
+      new DisqusJS({
+        shortname: 'imyelo',
+        siteName: 'Yelo',
+        identifier: this.page.attributes.permalink,
+        apikey: 'xwnNb3KsGSW2Yz0RgtH8QnNiZOam99KUhd9lfvfnAEOdvIeLITVssLIi7y4Yn1hT',
+      })
     },
   },
   filters: {
@@ -155,9 +178,8 @@ export default {
   }
 }
 
-
 .siblings {
-  margin: 8rem auto;
+  margin: 8rem auto 2rem;
   padding: 2rem 0 0;
   width: 100%;
   max-width: 48rem;
@@ -184,6 +206,30 @@ export default {
       text-decoration: none;
       transition: 200ms all ease;
     }
+  }
+}
+
+.comments {
+  margin: 0 auto;
+  padding: 2rem 0 0;
+  width: 100%;
+  max-width: 48rem;
+  box-sizing: border-box;
+  border-top: 1px solid hsl(60,1%,0%,0.04);
+  text-align: center;
+  font-size: 1em;
+  .switch {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 1em 2em;
+    cursor: pointer;
+    color: hsl(60,1%,60%);
+    &:hover {
+      color: #fff;
+    }
+  }
+  & >>> * {
+    font-size: 1em !important;
   }
 }
 
