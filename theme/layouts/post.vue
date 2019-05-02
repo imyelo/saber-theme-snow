@@ -108,6 +108,7 @@ export default {
       overflow: hidden;
       border-radius: 50%;
       img {
+        margin: 0;
         width: 100%;
         max-width: 100%;
       }
