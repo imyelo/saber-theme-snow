@@ -88,6 +88,14 @@ export default {
   margin: calc(8rem - 3rem) auto;
   padding: 0 1rem;
   box-sizing: border-box;
+  img {
+    display: inline-block;
+    margin: 1em 0;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 1em 2em 0 hsla(60,1%,10%,0.04);
+  }
   .author {
     margin: 1rem 0 8rem;
     line-height: 2em;
