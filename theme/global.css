@@ -96,6 +96,20 @@ code {
 img {
   max-width: 100%;
 }
+figure {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  max-width: 100%;
+  border: 1px solid hsla(60,1%,10%,0.05);
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+figure img {
+  display: block;
+  max-width: 100%;
+}
 table {
   margin: 2rem 0;
   width: 100%;
