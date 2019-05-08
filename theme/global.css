@@ -63,6 +63,8 @@ blockquote {
   padding: 0 0 0 1em;
   color: hsl(60,1%,40%);
   border-left: 0.5em solid hsl(60,1%,90%);
+  word-wrap: break-word;
+  word-break: break-word;
 }
 pre {
   overflow: auto;
@@ -120,6 +122,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   line-height: 2.5em;
+  font-size: 0.85em;
 }
 thead {
   text-align: center;
