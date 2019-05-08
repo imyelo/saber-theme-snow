@@ -1,3 +1,5 @@
+require('./stylesheet')
+
 export default ({ router }) => {
   /**
    * fork nprogress intergration from:
@@ -6,8 +8,6 @@ export default ({ router }) => {
   // Progress bar is not needed on server-side
   if (process.browser) {
     // These dependencies are only bundled in client build
-    require('./stylesheet')
-
     const nprogress = require('nprogress')
 
     const loaded = Object.create(null)
