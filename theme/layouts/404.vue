@@ -7,8 +7,6 @@
 </template>
 
 <script>
-import '../global.css'
-
 export default {
   head () {
     return {

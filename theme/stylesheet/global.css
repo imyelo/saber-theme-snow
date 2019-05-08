@@ -83,6 +83,7 @@ code {
   word-wrap: break-word;
   color: hsl(60,1%,40%);
   background-color: hsla(60,1%,0%,0.02);
+  font-size: 0.875em;
 }
 .saber-highlight {
   font-size: 0.85em;
@@ -94,6 +95,12 @@ code {
     width: 100%;
     left: 0;
   }
+}
+.saber-highlight-code {
+  font-size: 1em !important;
+}
+.saber-highlight-code code {
+  font-size: 1em;
 }
 img {
   max-width: 100%;

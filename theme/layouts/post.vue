@@ -44,7 +44,6 @@
 </template>
 
 <script>
-import '../global.css'
 import 'prismjs/themes/prism.css'
 import fecha from 'fecha'
 import scroll from 'scroll'

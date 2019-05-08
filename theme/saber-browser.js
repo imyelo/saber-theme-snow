@@ -6,9 +6,9 @@ export default ({ router }) => {
   // Progress bar is not needed on server-side
   if (process.browser) {
     // These dependencies are only bundled in client build
+    require('./stylesheet')
+
     const nprogress = require('nprogress')
-    require('nprogress/nprogress.css')
-    require('./nprogress-theme.css')
 
     const loaded = Object.create(null)
 
