@@ -59,9 +59,21 @@ export default {
         this.$siteConfig.title
     }
   },
+  mounted () {
+    this.scrollToAnchor()
+  },
   methods: {
     toTop () {
       scroll.top(scrollDoc(), 0)
+    },
+    scrollToAnchor () {
+      let win = global.window
+      let doc = global.document
+      if (!win || !doc) {
+        return
+      }
+      let id = decodeURIComponent(win.location.hash).slice(1)
+      win.scrollTo(0, doc.getElementById(id).offsetTop)
     },
   },
   filters: {

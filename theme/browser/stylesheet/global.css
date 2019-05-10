@@ -25,7 +25,26 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  position: relative;
   color: hsl(60,1%,30%);
+  .header-anchor {
+    font-size: 0.75em;
+    position: absolute;
+    left: -2em;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    opacity: 0;
+    transition: 200ms all ease;
+    color: hsl(60,1%,40%);
+    &:hover {
+      color: hsl(60,1%,40%);
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+  &:hover .header-anchor {
+    opacity: 1;
+  }
 }
 h1 {
   margin: 8rem 0 2rem;
@@ -52,6 +71,7 @@ h6 {
   margin: 2rem 0 1rem;
   font-size: 1em;
 }
+
 hr {
   margin: 8em 0;
   border: none;
