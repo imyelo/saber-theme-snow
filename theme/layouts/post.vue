@@ -73,7 +73,10 @@ export default {
         return
       }
       let id = decodeURIComponent(win.location.hash).slice(1)
-      win.scrollTo(0, doc.getElementById(id).offsetTop)
+      let element = doc.getElementById(id)
+      if (element) {
+        win.scrollTo(0, element.offsetTop)
+      }
     },
   },
   filters: {
