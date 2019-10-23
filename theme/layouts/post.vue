@@ -39,7 +39,7 @@
     </nav>
     <div class="comments">
       <a v-if="!isDisqusShow" class="switch" @click="loadDisqus">
-        [ See comments / Leave a message ]
+        [ See comments / Leave yours ]
       </a>
       <div id="disqus_thread"></div>
     </div>
@@ -98,7 +98,7 @@ export default {
         shortname: 'imyelo',
         siteName: 'Yelo',
         identifier: this.page.attributes.permalink,
-        apikey: 'xwnNb3KsGSW2Yz0RgtH8QnNiZOam99KUhd9lfvfnAEOdvIeLITVssLIi7y4Yn1hT',
+        apikey: this.$themeConfig.disqus.apikey,
       })
     },
   },
@@ -215,7 +215,6 @@ export default {
   width: 100%;
   max-width: 48rem;
   box-sizing: border-box;
-  border-top: 1px solid hsl(60,1%,0%,0.04);
   text-align: center;
   font-size: 1em;
   .switch {
