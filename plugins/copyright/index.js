@@ -10,15 +10,11 @@ exports.apply = (api, options = {}) => {
   function injectCopyright () {
     for (const page of api.pages.values()) {
       if (typeof page.attributes.copyright === 'undefined' && options.copyright) {
-        api.pages.extendPageProp(page.internal.id, {
-          copyright: parse(options.copyright),
-        })
+        page.copyright = parse(options.copyright)
         continue
       }
       if (page.attributes.copyright) {
-        api.pages.extendPageProp(page.internal.id, {
-          copyright: parse(page.attributes.copyright),
-        })
+        page.copyright = parse(page.attributes.copyright)
         continue
       }
     }

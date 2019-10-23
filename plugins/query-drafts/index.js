@@ -6,7 +6,7 @@ exports.apply = (api, options = {}) => {
   if (process.env.NODE_ENV === 'production') {
     return
   }
-  
+
   api.hooks.onCreatePages.tap(ID, () => injectDrafts())
 
   function injectDrafts () {
@@ -24,9 +24,7 @@ exports.apply = (api, options = {}) => {
       }
     }
     for (const page of injectDraftsToPages) {
-      api.pages.extendPageProp(page.internal.id, {
-        drafts,
-      })
+      page.drafts = drafts
     }
   }
 }
