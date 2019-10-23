@@ -98,6 +98,7 @@ export default {
         shortname: 'imyelo',
         siteName: 'Yelo',
         identifier: this.page.attributes.permalink,
+        title: this.page.attributes.title,
         apikey: this.$themeConfig.disqus.apikey,
       })
     },
