@@ -121,6 +121,10 @@ export default {
       display: flex;
       .left {
         color: hsl(60,1%,40%);
+        .date {
+          display: inline-block;
+          width: 64px;
+        }
         .divider {
           padding: 0 2em;
         }
