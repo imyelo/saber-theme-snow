@@ -20,7 +20,7 @@
                 {{ post.attributes.title }}
               </saber-link>
               <template v-if="post.attributes.categories">
-                <saber-link class="category" v-for="(cat, index) in post.attributes.categories" :key="index" :to="`categories/${cat}`">
+                <saber-link class="category" v-for="(cat, index) in post.attributes.categories" :key="index" :to="`categories/${cat.toLowerCase()}`">
                   ~{{ cat }}
                 </saber-link>
               </template>
