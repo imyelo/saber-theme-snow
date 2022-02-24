@@ -6,7 +6,7 @@
         <saber-link class="title" :to="post.attributes.permalink">
           {{ post.attributes.title }}
         </saber-link>
-        <span class="date">{{ post.attributes.date | date }}</span>
+        <span class="date">{{ post.attributes.createdAt | date }}</span>
       </li>
     </ul>
     <p v-else>Nothing here.</p>

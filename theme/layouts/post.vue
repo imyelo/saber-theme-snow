@@ -13,14 +13,14 @@
         </div>
         <span class="name">{{ page.attributes.author || $siteConfig.author }}</span>
         <span class="divider">-</span>
-        <span class="date">{{ page.attributes.date | date }}</span>
+        <span class="date">{{ page.attributes.createdAt | date }}</span>
       </div>
       <div class="post">
         <slot name="default" />
       </div>
       <div class="copyright" v-if="page.copyright" v-html="page.copyright" />
       <div class="updated" v-if="page.attributes.updated">
-        - Last updated on {{ page.attributes.updated | date }}
+        - Last updated on {{ page.attributes.updatedAt | date }}
       </div>
     </div>
     <nav class="siblings">
