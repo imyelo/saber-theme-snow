@@ -187,3 +187,7 @@ table pre {
 .page-leave-to {
   transform: translate3d(0,-4px,0)
 }
+
+.medium-zoom-overlay, .medium-zoom-image {
+  z-index: 100;
+}
