@@ -37,7 +37,7 @@
         </li>
       </ul>
     </nav>
-    <div class="comments">
+    <div class="comments" v-if="isDisqusAvailable">
       <a v-if="!isDisqusShow" class="switch" @click="loadDisqus">
         [ See comments / Leave yours ]
       </a>
@@ -63,6 +63,11 @@ export default {
     return {
       isDisqusShow: false,
     }
+  },
+  computed: {
+    isDisqusAvailable () {
+      return this.$themeConfig.disqus
+    },
   },
   head () {
     const pageTitle = this.page.title
@@ -94,8 +99,8 @@ export default {
     loadDisqus () {
       this.isDisqusShow = true
       let disqusjs = new DisqusJS({
-        shortname: 'imyelo',
-        siteName: 'Yelo',
+        shortname: this.$themeConfig.disqus.shortname,
+        siteName: this.$themeConfig.disqus.siteName,
         identifier: this.page.permalink,
         title: this.page.title,
         apikey: this.$themeConfig.disqus.apikey,
