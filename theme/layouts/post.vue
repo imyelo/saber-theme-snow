@@ -9,7 +9,8 @@
       <div class="author">
         <div class="avatar">
           <img v-if="page.avatar" :src="page.avatar" />
-          <img v-else src="/avatar.jpg" />
+          <img v-else-if="$themeConfig.avatar" :src="$themeConfig.avatar" />
+          <img v-else src="/default-avatar.png" />
         </div>
         <span class="name">{{ page.author || $siteConfig.author }}</span>
         <span class="divider">-</span>
