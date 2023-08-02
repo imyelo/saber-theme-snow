@@ -1,0 +1,25 @@
+{
+  "name": "@yelo/saber-theme-snow",
+  "version": "0.0.0",
+  "author": "yelo <zhihuzeye@gmail.com>",
+  "scripts": {
+    "build": "vue-compile src -o dist",
+    "prepublishOnly": "yarn build",
+    "dev:example": "saber example",
+    "build:example": "saber build example"
+  },
+  "devDependencies": {
+    "postcss-calc": "^7.0.5",
+    "precss": "^4.0.0",
+    "vue-compile": "^1.1.2"
+  },
+  "dependencies": {
+    "disqusjs": "^3.0.2",
+    "fecha": "^4.2.3",
+    "nprogress": "^0.2.0",
+    "prism-themes": "^1.9.0",
+    "prismjs": "^1.29.0",
+    "scroll": "^3.0.1",
+    "scroll-doc": "^0.2.1"
+  }
+}

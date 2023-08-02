@@ -1,0 +1,9 @@
+{
+  "name": "@yelo/saber-plugin-copyright",
+  "version": "0.0.0",
+  "author": "yelo <zhihuzeye@gmail.com>",
+  "main": "index.js",
+  "dependencies": {
+    "marked": "^4.3.0"
+  }
+}

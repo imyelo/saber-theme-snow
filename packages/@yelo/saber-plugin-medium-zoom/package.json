@@ -1,0 +1,9 @@
+{
+  "name": "@yelo/saber-plugin-medium-zoom",
+  "version": "0.0.0",
+  "author": "yelo <zhihuzeye@gmail.com>",
+  "main": "index.js",
+  "dependencies": {
+    "medium-zoom": "^1.0.8"
+  }
+}

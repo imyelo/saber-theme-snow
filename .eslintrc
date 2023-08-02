@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "extends": [
+    "@yelo/eslint-config"
+  ],
+  "rules": {
+    "no-console": "off",
+    "import/extensions": "off"
+  },
+  "ignorePatterns": [
+    "**/node_modules/*"
+  ]
+}
