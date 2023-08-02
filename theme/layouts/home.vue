@@ -11,16 +11,16 @@
           <h3>
             <div class="left">
               <span class="date">
-                {{ post.attributes.createdAt | date }}
+                {{ post.createdAt | date }}
               </span>
               <span class="divider"> - </span>
             </div>
             <div class="right">
-              <saber-link class="title" :to="post.attributes.permalink">
-                {{ post.attributes.title }}
+              <saber-link class="title" :to="post.permalink">
+                {{ post.title }}
               </saber-link>
-              <template v-if="post.attributes.categories">
-                <saber-link class="category" v-for="(cat, index) in post.attributes.categories" :key="index" :to="`categories/${cat.toLowerCase()}`">
+              <template v-if="post.categories">
+                <saber-link class="category" v-for="(cat, index) in post.categories" :key="index" :to="`categories/${cat.toLowerCase()}`">
                   ~{{ cat }}
                 </saber-link>
               </template>
@@ -32,7 +32,7 @@
     <section class="catch-me">
       <h2>Catch me</h2>
       <ul>
-        <li v-for="(me, index) in page.attributes.catchMe" v-show="!me.hide" :key="index">
+        <li v-for="(me, index) in page.catchMe" v-show="!me.hide" :key="index">
           <a v-if="me.email" @click="mail(me.url)">{{ me.name }}</a>
           <a v-else :href="me.url" target="_blank">{{ me.name }}</a>
         </li>

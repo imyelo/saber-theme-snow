@@ -10,8 +10,12 @@ exports.onCreatePages = function() {
     .sort((a, b) => {
       return a.attributes.createdAt > b.attributes.createdAt ? 1 : -1
     })
+  const selectFields = page => (page && {
+    title: page.title,
+    permalink: page.permalink
+  })
   for (const [index, post] of posts.entries()) {
-    post.prevPost = this.pages.getPagePublicFields(posts[index - 1])
-    post.nextPost = this.pages.getPagePublicFields(posts[index + 1])
+    post.prevPost = selectFields(posts[index - 1])
+    post.nextPost = selectFields(posts[index + 1])
   }
 }

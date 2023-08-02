@@ -1,4 +1,4 @@
-const marked = require('marked')
+const { marked } = require('marked')
 
 const ID = 'copyright'
 
@@ -9,12 +9,12 @@ exports.apply = (api, options = {}) => {
 
   function injectCopyright () {
     for (const page of api.pages.values()) {
-      if (typeof page.attributes.copyright === 'undefined' && options.copyright) {
+      if (typeof page.copyright === 'undefined' && options.copyright) {
         page.copyright = parse(options.copyright)
         continue
       }
-      if (page.attributes.copyright) {
-        page.copyright = parse(page.attributes.copyright)
+      if (page.copyright) {
+        page.copyright = parse(page.copyright)
         continue
       }
     }
@@ -22,5 +22,5 @@ exports.apply = (api, options = {}) => {
 }
 
 function parse (copyright) {
-  return marked(copyright)
+  return marked.parse(copyright)
 }

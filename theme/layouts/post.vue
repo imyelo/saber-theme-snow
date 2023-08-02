@@ -1,38 +1,38 @@
 <template>
   <div>
     <nav class="top">
-      <saber-link v-if="page.attributes.draft" class="to-home" to="/drafts">&lt; Back to Drafts-List</saber-link>
+      <saber-link v-if="page.draft" class="to-home" to="/drafts">&lt; Back to Drafts-List</saber-link>
       <saber-link v-else class="to-home" to="/">&lt; Back to Home</saber-link>
     </nav>
     <div class="page">
-      <h1>{{ page.attributes.title }}</h1>
+      <h1>{{ page.title }}</h1>
       <div class="author">
         <div class="avatar">
-          <img v-if="page.attributes.avatar" :src="page.attributes.avatar" />
+          <img v-if="page.avatar" :src="page.avatar" />
           <img v-else src="/avatar.jpg" />
         </div>
-        <span class="name">{{ page.attributes.author || $siteConfig.author }}</span>
+        <span class="name">{{ page.author || $siteConfig.author }}</span>
         <span class="divider">-</span>
-        <span class="date">{{ page.attributes.createdAt | date }}</span>
+        <span class="date">{{ page.createdAt | date }}</span>
       </div>
       <div class="post">
         <slot name="default" />
       </div>
       <div class="copyright" v-if="page.copyright" v-html="page.copyright" />
-      <div class="updated" v-if="page.attributes.updated">
-        - Last updated on {{ page.attributes.updatedAt | date }}
+      <div class="updated" v-if="page.updated">
+        - Last updated on {{ page.updatedAt | date }}
       </div>
     </div>
     <nav class="siblings">
       <ul>
         <li class="previous" v-if="page.prevPost">
-          <router-link :to="page.prevPost.attributes.permalink">
-            &lt; {{ page.prevPost.attributes.title }}
+          <router-link :to="page.prevPost.permalink">
+            &lt; {{ page.prevPost.title }}
           </router-link>
         </li>
         <li class="next" v-if="page.nextPost">
-          <router-link :to="page.nextPost.attributes.permalink">
-            {{ page.nextPost.attributes.title }} &gt;
+          <router-link :to="page.nextPost.permalink">
+            {{ page.nextPost.title }} &gt;
           </router-link>
         </li>
       </ul>
@@ -51,7 +51,7 @@
 
 <script>
 import 'prismjs/themes/prism.css'
-import 'disqusjs/dist/disqusjs.css'
+import 'disqusjs/dist/styles/disqusjs.css'
 import fecha from 'fecha'
 import scroll from 'scroll'
 import scrollDoc from 'scroll-doc'
@@ -65,7 +65,7 @@ export default {
     }
   },
   head () {
-    const pageTitle = this.page.attributes.title
+    const pageTitle = this.page.title
     return {
       title: pageTitle ?
         `${pageTitle} - ${this.$siteConfig.title}` :
@@ -93,14 +93,14 @@ export default {
     },
     loadDisqus () {
       this.isDisqusShow = true
-      window.DISQUS = null
-      new DisqusJS({
+      let disqusjs = new DisqusJS({
         shortname: 'imyelo',
         siteName: 'Yelo',
-        identifier: this.page.attributes.permalink,
-        title: this.page.attributes.title,
+        identifier: this.page.permalink,
+        title: this.page.title,
         apikey: this.$themeConfig.disqus.apikey,
       })
+      disqusjs.render(document.getElementById('disqus_thread'))
     },
   },
   filters: {
