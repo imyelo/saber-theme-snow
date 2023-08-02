@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "packages/@yelo/*"
+    "packages/@yelo/*",
+    "example"
   ],
   "scripts": {
     "prepare": "husky install",
@@ -23,6 +24,11 @@
     "prettier": "^2.8.7",
     "prettier-eslint-cli": "^6.0.1",
     "ultra-runner": "^3.10.5"
+  },
+  "resolutions": {
+    "vue-server-renderer": "2.6.14",
+    "vue-template-compiler": "2.6.14",
+    "vue": "2.6.14"
   },
   "version": "0.0.0",
   "name": "@yelo/saber-theme-snow-workspace"

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /_saber/
+Sitemap: http://saber-theme-snow.yelo.ooo/sitemap.xml

@@ -1,0 +1,52 @@
+# Use `theme: '@yelo/snow'` instead in your project
+theme: ../packages/@yelo/saber-theme-snow/dist
+siteConfig:
+  title: Snow
+  author: Yelo
+  url: https://saber-theme-snow.yelo.ooo/
+themeConfig:
+  avatar: /avatar.jpg
+  # Use your own disqus config
+  # - https://github.com/SukkaW/disqusjs#%E9%85%8D%E7%BD%AE-disqusjs-%E5%8F%82%E6%95%B0
+  disqus:
+    # shortname:
+    # siteName:
+    # apikey:
+permalinks:
+  post: /:year/:month/:day/:slug.html
+  page: /:slug.html
+markdown:
+  highlighter: prism
+  plugins:
+    - resolve: markdown-it-emoji
+    - resolve: markdown-it-footnote
+    - resolve: markdown-it-implicit-figures
+    - resolve: markdown-it-multimd-table
+    - resolve: markdown-it-anchor
+      options:
+        permalink: true
+        permalinkSymbol: '📎'
+        permalinkBefore: true
+plugins:
+  - resolve: saber-plugin-prismjs
+  - resolve: saber-plugin-query-posts
+  - resolve: '@yelo/saber-plugin-query-drafts'
+  - resolve: saber-plugin-seo
+  # - resolve: saber-plugin-google-analytics
+  #   options:
+  #     trackId: UA-000000000-0
+  - resolve: saber-plugin-feed
+    options:
+      atomFeed: true
+      rss2Feed: true
+      jsonFeed: true
+  - resolve: saber-plugin-sitemap
+  - resolve: '@yelo/saber-plugin-medium-zoom'
+    options:
+      selector: 'figure img'
+      options:
+        background: '"hsl(0, 0%, 98%, .9)"'
+  - resolve: '@yelo/saber-plugin-copyright'
+    options:
+      copyright: >
+        [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh) &copy; [Yelo](https://yelo.cc)
