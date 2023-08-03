@@ -4,6 +4,8 @@ copyright: false
 original: https://github.com/mxstbr/markdown-test-file
 createdAt: 2019-04-27
 layout: post
+categories:
+  - Demo
 ---
 
 - [Overview](#overview)

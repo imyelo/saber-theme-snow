@@ -144,6 +144,7 @@ Since Saber has been unmaintained for a long time, you may not be able to enable
 
 ## Live demo
 
+- [Snow theme for Saber](https://saber-theme-snow.yelo.ooo)
 - [Yelo](https://yelo.cc)
 
 ## License
