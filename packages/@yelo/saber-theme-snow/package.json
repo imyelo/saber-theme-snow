@@ -1,6 +1,6 @@
 {
   "name": "@yelo/saber-theme-snow",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "yelo <zhihuzeye@gmail.com>",
   "scripts": {
     "build": "vue-compile src -o dist",
