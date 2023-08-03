@@ -8,6 +8,12 @@
     "dev:example": "saber example",
     "build:example": "saber build example"
   },
+  "license": "Apache-2.0",
+  "repository": "github:imyelo/saber-theme-snow",
+  "bugs": {
+    "url": "https://github.com/imyelo/saber-theme-snow/issues"
+  },
+  "homepage": "https://github.com/imyelo/saber-theme-snow#readme",
   "devDependencies": {
     "postcss-calc": "^7.0.5",
     "precss": "^4.0.0",

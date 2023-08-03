@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "author": "yelo <zhihuzeye@gmail.com>",
   "main": "index.js",
+  "license": "Apache-2.0",
+  "repository": "github:imyelo/saber-theme-snow",
+  "bugs": {
+    "url": "https://github.com/imyelo/saber-theme-snow/issues"
+  },
+  "homepage": "https://github.com/imyelo/saber-theme-snow#readme",
   "dependencies": {
     "marked": "^4.3.0"
   }
