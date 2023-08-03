@@ -8,6 +8,9 @@
     "dev:example": "saber example",
     "build:example": "saber build example"
   },
+  "files": [
+    "dist"
+  ],
   "license": "Apache-2.0",
   "repository": "github:imyelo/saber-theme-snow",
   "bugs": {
