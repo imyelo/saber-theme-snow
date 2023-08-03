@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "yelo <zhihuzeye@gmail.com>",
   "scripts": {
     "start": "NODE_OPTIONS=--openssl-legacy-provider saber",
@@ -12,7 +12,7 @@
     "@yelo/saber-plugin-copyright": "^0.1.0",
     "@yelo/saber-plugin-medium-zoom": "^0.1.0",
     "@yelo/saber-plugin-query-drafts": "^0.1.0",
-    "@yelo/saber-theme-snow": "^0.1.0",
+    "@yelo/saber-theme-snow": "^0.1.1",
     "gh-pages": "^5.0.0",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-emoji": "^2.0.2",
