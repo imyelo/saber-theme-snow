@@ -5,7 +5,7 @@ siteConfig:
   author: Yelo
   url: https://saber-theme-snow.yelo.ooo/
 themeConfig:
-  avatar: /avatar.jpg
+  avatar: /avatar.png
   # Use your own disqus config
   # - https://github.com/SukkaW/disqusjs#%E9%85%8D%E7%BD%AE-disqusjs-%E5%8F%82%E6%95%B0
   disqus:

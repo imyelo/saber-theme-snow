@@ -1,7 +1,10 @@
 <template>
   <div class="page">
     <header>
-      <div class="avatar"><img src="/avatar.jpg" /></div>
+      <div class="avatar">
+        <img v-if="$themeConfig.avatar" :src="$themeConfig.avatar" />
+        <img v-else src="/default-avatar.png" />
+      </div>
       <h1>{{ $siteConfig.title }}</h1>
     </header>
     <section class="recent-posts" v-if="page.posts">
