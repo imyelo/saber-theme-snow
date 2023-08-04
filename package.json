@@ -6,6 +6,8 @@
   ],
   "scripts": {
     "prepare": "husky install",
+    "start": "ultra -r start",
+    "build": "ultra -r --no-pretty build",
     "release": "lerna publish"
   },
   "prettier": "@yelo/prettier-config",

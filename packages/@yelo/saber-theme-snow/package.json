@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "author": "yelo <zhihuzeye@gmail.com>",
   "scripts": {
+    "start": "yarn build -w",
     "build": "vue-compile src -o dist",
     "prepublishOnly": "yarn build",
     "dev:example": "saber example",
